@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="黑兽2樱花动漫全集官方网站，聚焦暗黑幻想动画的原创正版高清内容平台，汇聚创作者社区、剧情解析与品牌动态。">
+<title>黑兽2樱花动漫全集 - 暗黑幻想动画 | 官方原创正版高清内容平台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314111e'/%3E%3Cpath d='M18 46 L32 14 L46 46 L32 38 Z' fill='%23e8467c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bs2-bg:#14111e;
+  --bs2-bg-soft:#1c1829;
+  --bs2-panel:#221d33;
+  --bs2-line:#352d4a;
+  --bs2-ink:#efeaf7;
+  --bs2-muted:#a99fc4;
+  --bs2-neon:#e8467c;
+  --bs2-neon-soft:#ff8fb3;
+  --bs2-cyan:#5fe0d0;
+  --bs2-violet:#9b7bff;
+  --bs2-radius:14px;
+  --bs2-sticky:118px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--bs2-sticky);}
+body{
+  margin:0;
+  background:var(--bs2-bg);
+  color:var(--bs2-ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700;}
+p{margin:0 0 12px;}
+ul{margin:0;padding:0;list-style:none;}
+.bs2-wrap{width:min(1180px,92vw);margin:0 auto;}
+.bs2-sticky-zone{position:sticky;top:0;z-index:80;}
+
+/* 公告条 */
+.bs2-notice{
+  background:linear-gradient(90deg,#e8467c,#9b7bff 55%,#5fe0d0);
+  color:#12101a;
+  font-size:13.5px;
+  font-weight:600;
+  letter-spacing:.2px;
+}
+.bs2-notice-inner{
+  display:flex;align-items:center;gap:14px;
+  padding:9px 0;overflow:hidden;
+}
+.bs2-notice-tag{
+  flex:0 0 auto;background:#12101a;color:#ffd9e6;
+  border-radius:99px;padding:2px 12px;font-size:12px;
+}
+.bs2-notice-track{flex:1 1 auto;display:flex;gap:38px;min-width:0;overflow:hidden;}
+.bs2-notice-item{white-space:nowrap;animation:bs2-slide 26s linear infinite;}
+.bs2-notice-track:hover .bs2-notice-item{animation-play-state:paused;}
+@keyframes bs2-slide{0%{transform:translateX(0)}100%{transform:translateX(-220%)}}
+
+/* 页头 */
+.bs2-header{
+  background:rgba(20,17,30,.94);
+  border-bottom:1px solid var(--bs2-line);
+  backdrop-filter:blur(14px);
+}
+.bs2-header-inner{
+  display:flex;align-items:center;gap:22px;padding:12px 0;flex-wrap:wrap;
+}
+.bs2-logo{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.bs2-logo-mark{width:38px;height:38px;}
+.bs2-logo-text{font-size:18px;font-weight:800;letter-spacing:.4px;}
+.bs2-logo-text small{display:block;font-size:10.5px;font-weight:500;color:var(--bs2-muted);letter-spacing:2px;}
+.bs2-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1 1 auto;}
+.bs2-nav a{
+  padding:6px 11px;border-radius:9px;font-size:14px;color:var(--bs2-muted);
+  transition:.2s;
+}
+.bs2-nav a:hover{color:var(--bs2-ink);background:var(--bs2-panel);}
+.bs2-search{display:flex;align-items:center;gap:8px;flex:0 0 auto;}
+.bs2-search-field{
+  display:flex;align-items:center;background:var(--bs2-bg-soft);
+  border:1px solid var(--bs2-line);border-radius:11px;padding:0 6px 0 12px;
+  transition:.2s;
+}
+.bs2-search-field:focus-within{border-color:var(--bs2-neon);box-shadow:0 0 0 3px rgba(232,70,124,.16);}
+.bs2-search-field input{
+  background:transparent;border:0;outline:0;color:var(--bs2-ink);
+  width:172px;font-size:13.5px;padding:9px 4px;
+}
+.bs2-search-field input::placeholder{color:#6f658c;}
+.bs2-search-btn{
+  background:var(--bs2-neon);border:0;color:#fff;border-radius:8px;
+  padding:6px 12px;font-size:13px;font-weight:600;
+}
+.bs2-search-btn:hover{background:var(--bs2-neon-soft);color:#231327;}
+.bs2-search-hint{
+  font-size:12.5px;color:var(--bs2-cyan);min-height:18px;text-align:right;flex-basis:100%;
+}
+.bs2-burger{
+  display:none;background:var(--bs2-panel);border:1px solid var(--bs2-line);
+  color:var(--bs2-ink);border-radius:10px;padding:8px 12px;font-size:14px;
+}
+
+/* 通用区块 */
+.bs2-section{padding:64px 0;}
+.bs2-section--tight{padding:44px 0;}
+.bs2-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:2.4px;color:var(--bs2-cyan);
+  text-transform:uppercase;font-weight:700;margin-bottom:12px;
+}
+.bs2-kicker::before{content:"";width:22px;height:2px;background:var(--bs2-cyan);}
+.bs2-h2{font-size:clamp(23px,3vw,32px);margin-bottom:10px;}
+.bs2-h2 em{font-style:normal;color:var(--bs2-neon);}
+.bs2-lead{color:var(--bs2-muted);max-width:760px;font-size:15px;}
+.bs2-grid{display:grid;gap:22px;}
+.bs2-g2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.bs2-g3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.bs2-g4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.bs2-card{
+  background:var(--bs2-panel);border:1px solid var(--bs2-line);
+  border-radius:var(--bs2-radius);padding:20px;min-width:0;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.bs2-card:hover{
+  transform:translateY(-4px);border-color:rgba(232,70,124,.55);
+  box-shadow:0 16px 34px -20px rgba(232,70,124,.7);
+}
+.bs2-tag{
+  display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:99px;
+  background:rgba(95,224,208,.13);color:var(--bs2-cyan);
+  border:1px solid rgba(95,224,208,.34);margin:0 6px 6px 0;
+}
+.bs2-tag--pink{background:rgba(232,70,124,.14);color:var(--bs2-neon-soft);border-color:rgba(232,70,124,.4);}
+.bs2-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  border-radius:11px;padding:11px 20px;font-size:14px;font-weight:700;
+  border:1px solid transparent;transition:.2s;
+}
+.bs2-btn--primary{background:var(--bs2-neon);color:#fff;}
+.bs2-btn--primary:hover{background:var(--bs2-neon-soft);color:#241528;}
+.bs2-btn--ghost{background:transparent;border-color:var(--bs2-line);color:var(--bs2-ink);}
+.bs2-btn--ghost:hover{border-color:var(--bs2-cyan);color:var(--bs2-cyan);}
+
+/* 首屏：全幅主视觉背景与浮动文字 */
+.bs2-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--bs2-line);}
+.bs2-hero-bg{position:absolute;inset:0;}
+.bs2-hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.6;}
+.bs2-hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(20,17,30,.97) 34%,rgba(20,17,30,.55) 66%,rgba(20,17,30,.3));
+}
+.bs2-hero-inner{position:relative;z-index:2;padding:78px 0 64px;}
+.bs2-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.6px;
+  border:1px solid rgba(255,143,179,.5);color:var(--bs2-neon-soft);
+  padding:4px 13px;border-radius:99px;margin-bottom:20px;
+  background:rgba(232,70,124,.12);
+}
+.bs2-hero h1{
+  font-size:clamp(38px,6.6vw,76px);letter-spacing:1px;
+  background:linear-gradient(96deg,#fff 18%,#ff8fb3 58%,#9b7bff 96%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  max-width:14ch;
+}
+.bs2-hero-sub{
+  font-size:clamp(15px,1.7vw,19px);color:#d6cdea;max-width:640px;margin:18px 0 8px;
+}
+.bs2-hero-desc{
+  color:var(--bs2-muted);max-width:660px;font-size:14.5px;margin-bottom:26px;
+}
+.bs2-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:38px;}
+.bs2-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:660px;}
+.bs2-stat{
+  background:rgba(34,29,51,.72);border:1px solid var(--bs2-line);
+  border-radius:12px;padding:14px 16px;backdrop-filter:blur(6px);
+}
+.bs2-stat b{display:block;font-size:clamp(20px,2.6vw,27px);color:var(--bs2-cyan);}
+.bs2-stat span{font-size:12.5px;color:var(--bs2-muted);}
+
+/* 焦点内容 */
+.bs2-focus{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:start;}
+.bs2-focus-cover{
+  position:relative;border-radius:var(--bs2-radius);overflow:hidden;border:1px solid var(--bs2-line);
+}
+.bs2-focus-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.bs2-focus-cover .bs2-play{
+  position:absolute;left:16px;bottom:16px;background:rgba(20,17,30,.82);
+  border:1px solid rgba(255,143,179,.5);color:#fff;border-radius:10px;
+  padding:7px 14px;font-size:13px;font-weight:600;display:inline-flex;gap:8px;align-items:center;
+}
+.bs2-focus-meta{display:flex;gap:16px;font-size:12.5px;color:var(--bs2-muted);margin-top:10px;flex-wrap:wrap;}
+.bs2-list-item{
+  display:flex;gap:14px;padding:15px 0;border-bottom:1px dashed var(--bs2-line);
+}
+.bs2-list-item:last-child{border-bottom:0;}
+.bs2-list-index{
+  flex:0 0 auto;font-size:13px;font-weight:800;color:var(--bs2-neon);
+  width:26px;padding-top:2px;
+}
+.bs2-list-item h3{font-size:15.5px;margin-bottom:5px;}
+.bs2-list-item p{font-size:13px;color:var(--bs2-muted);margin:0 0 7px;}
+.bs2-list-meta{font-size:12px;color:#817799;display:flex;gap:12px;flex-wrap:wrap;}
+
+/* 视频列表卡片 */
+.bs2-vid-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;}
+.bs2-act{
+  background:var(--bs2-bg-soft);border:1px solid var(--bs2-line);color:var(--bs2-muted);
+  border-radius:9px;font-size:12.5px;padding:5px 11px;display:inline-flex;gap:6px;align-items:center;
+  transition:.2s;
+}
+.bs2-act:hover{color:var(--bs2-ink);border-color:var(--bs2-violet);}
+.bs2-act.is-liked{color:var(--bs2-neon-soft);border-color:var(--bs2-neon);background:rgba(232,70,124,.14);}
+.bs2-act.is-faved{color:var(--bs2-cyan);border-color:var(--bs2-cyan);background:rgba(95,224,208,.12);}
+.bs2-vid-thumb{border-radius:11px;overflow:hidden;margin-bottom:14px;}
+.bs2-vid-thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .4s;}
+.bs2-card:hover .bs2-vid-thumb img{transform:scale(1.045);}
+
+/* 专题 */
+.bs2-topic{
+  background:linear-gradient(160deg,var(--bs2-panel),#1a1628);
+  border:1px solid var(--bs2-line);border-radius:var(--bs2-radius);padding:22px;min-width:0;
+}
+.bs2-topic h3{font-size:17px;margin-bottom:8px;}
+.bs2-topic > p{font-size:13.5px;color:var(--bs2-muted);}
+.bs2-topic-status{
+  font-size:11.5px;color:var(--bs2-cyan);border:1px solid rgba(95,224,208,.35);
+  border-radius:99px;padding:2px 10px;display:inline-block;margin-bottom:12px;
+}
+.bs2-topic ul li{
+  font-size:13.5px;color:#c8bfe0;padding:7px 0 7px 16px;position:relative;
+  border-bottom:1px dashed rgba(53,45,74,.7);
+}
+.bs2-topic ul li:last-child{border-bottom:0;}
+.bs2-topic ul li::before{
+  content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:2px;
+  background:var(--bs2-neon);
+}
+
+/* 关键词解析 */
+.bs2-article{max-width:860px;}
+.bs2-article h3{font-size:18px;margin:28px 0 10px;color:#ffd9e6;}
+.bs2-article h3:first-child{margin-top:0;}
+.bs2-article p{font-size:15px;color:#cdc4e3;}
+.bs2-quote{
+  border-left:3px solid var(--bs2-neon);background:rgba(232,70,124,.08);
+  padding:14px 18px;border-radius:0 10px 10px 0;margin:18px 0;font-size:14.5px;color:#e4d9f5;
+}
+
+/* 作者 */
+.bs2-author{display:flex;gap:14px;align-items:flex-start;}
+.bs2-avatar{
+  flex:0 0 auto;width:52px;height:52px;border-radius:50%;
+  display:grid;place-items:center;font-weight:800;font-size:19px;color:#16121f;
+}
+.bs2-author h3{font-size:15.5px;margin-bottom:3px;}
+.bs2-author .bs2-role{font-size:12px;color:var(--bs2-cyan);margin-bottom:7px;}
+.bs2-author p{font-size:13px;color:var(--bs2-muted);margin:0 0 9px;}
+.bs2-author-data{font-size:12px;color:#8b80a8;display:flex;gap:14px;flex-wrap:wrap;}
+.bs2-author-more{
+  margin-top:11px;background:transparent;border:1px solid var(--bs2-line);
+  color:var(--bs2-muted);border-radius:8px;font-size:12.5px;padding:5px 11px;
+}
+.bs2-author-more:hover{color:var(--bs2-cyan);border-color:var(--bs2-cyan);}
+
+/* 评论 */
+.bs2-cmt{padding:18px 0;border-bottom:1px dashed var(--bs2-line);}
+.bs2-cmt:last-child{border-bottom:0;}
+.bs2-cmt-head{display:flex;align-items:center;gap:9px;font-size:13px;margin-bottom:6px;}
+.bs2-cmt-head b{font-size:13.5px;}
+.bs2-cmt-head span{color:#7f7599;font-size:12px;}
+.bs2-cmt p{font-size:14px;color:#c8bfe0;margin:0;}
+.bs2-cmt-score{color:var(--bs2-neon-soft);font-size:12.5px;margin-top:6px;letter-spacing:1px;}
+
+/* 动态 & 排行 */
+.bs2-timeline li{
+  position:relative;padding:0 0 20px 22px;border-left:1px solid var(--bs2-line);
+}
+.bs2-timeline li:last-child{padding-bottom:0;border-left-color:transparent;}
+.bs2-timeline li::before{
+  content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;
+  background:var(--bs2-neon);box-shadow:0 0 0 3px rgba(232,70,124,.2);
+}
+.bs2-timeline time{font-size:12px;color:var(--bs2-cyan);letter-spacing:.5px;}
+.bs2-timeline p{font-size:13.5px;color:var(--bs2-muted);margin:3px 0 0;}
+
+.bs2-rank li{
+  display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--bs2-line);
+  font-size:14px;
+}
+.bs2-rank li:last-child{border-bottom:0;}
+.bs2-rank-no{
+  flex:0 0 auto;width:24px;height:24px;border-radius:7px;display:grid;place-items:center;
+  font-size:12px;font-weight:800;background:var(--bs2-bg-soft);color:var(--bs2-muted);
+}
+.bs2-rank li:nth-child(1) .bs2-rank-no{background:var(--bs2-neon);color:#fff;}
+.bs2-rank li:nth-child(2) .bs2-rank-no{background:var(--bs2-violet);color:#151021;}
+.bs2-rank li:nth-child(3) .bs2-rank-no{background:var(--bs2-cyan);color:#101820;}
+.bs2-rank-name{flex:1 1 auto;min-width:0;}
+.bs2-rank-val{font-size:12.5px;color:var(--bs2-muted);flex:0 0 auto;}
+
+/* FAQ */
+.bs2-faq details{
+  border:1px solid var(--bs2-line);border-radius:12px;padding:14px 18px;margin-bottom:10px;
+  background:var(--bs2-panel);transition:.2s;
+}
+.bs2-faq details[open]{border-color:rgba(232,70,124,.5);}
+.bs2-faq summary{
+  cursor:pointer;font-size:14.5px;font-weight:600;list-style:none;display:flex;
+  justify-content:space-between;gap:12px;align-items:center;
+}
+.bs2-faq summary::-webkit-details-marker{display:none;}
+.bs2-faq summary::after{content:"+";color:var(--bs2-neon);font-size:18px;flex:0 0 auto;}
+.bs2-faq details[open] summary::after{content:"−";}
+.bs2-faq p{font-size:13.5px;color:var(--bs2-muted);margin:10px 0 0;}
+
+/* 合作墙 */
+.bs2-partner{
+  display:grid;place-items:center;height:76px;border-radius:12px;
+  border:1px solid var(--bs2-line);background:var(--bs2-bg-soft);
+  font-size:14px;font-weight:700;color:#b8aed4;letter-spacing:.5px;text-align:center;padding:0 10px;
+}
+
+/* 投稿/联系 */
+.bs2-cta{
+  background:linear-gradient(120deg,rgba(232,70,124,.16),rgba(155,123,255,.14),rgba(95,224,208,.12));
+  border:1px solid var(--bs2-line);border-radius:18px;padding:34px;
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.bs2-cta h2{font-size:clamp(20px,2.6vw,27px);margin-bottom:8px;}
+.bs2-cta p{font-size:14px;color:var(--bs2-muted);margin:0;max-width:560px;}
+
+/* 页脚 */
+.bs2-footer{border-top:1px solid var(--bs2-line);background:var(--bs2-bg-soft);padding:48px 0 26px;font-size:13.5px;color:var(--bs2-muted);}
+.bs2-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;}
+.bs2-footer h4{font-size:14px;color:var(--bs2-ink);margin-bottom:12px;}
+.bs2-footer li{padding:4px 0;}
+.bs2-footer a:hover{color:var(--bs2-cyan);}
+.bs2-copy{border-top:1px solid var(--bs2-line);margin-top:30px;padding-top:18px;font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+/* 弹窗 & Toast */
+.bs2-modal{
+  position:fixed;inset:0;background:rgba(9,7,15,.78);z-index:200;
+  display:none;place-items:center;padding:20px;
+}
+.bs2-modal.is-open{display:grid;}
+.bs2-modal-box{
+  background:var(--bs2-panel);border:1px solid var(--bs2-line);border-radius:16px;
+  width:min(520px,94vw);padding:26px;max-height:86vh;overflow:auto;
+}
+.bs2-modal-box h3{font-size:18px;margin-bottom:10px;}
+.bs2-modal-box p{font-size:14px;color:var(--bs2-muted);}
+.bs2-modal-close{
+  margin-top:18px;background:var(--bs2-bg-soft);border:1px solid var(--bs2-line);
+  color:var(--bs2-ink);border-radius:10px;padding:9px 18px;font-size:13.5px;
+}
+.bs2-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--bs2-neon);color:#fff;padding:10px 22px;border-radius:99px;
+  font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:300;
+}
+.bs2-toast.is-show{opacity:1;transform:translate(-50%,0);}
+.bs2-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;
+  background:var(--bs2-panel);border:1px solid var(--bs2-line);color:var(--bs2-cyan);
+  font-size:18px;display:none;place-items:center;z-index:120;
+}
+.bs2-top.is-show{display:grid;}
+
+@media (max-width:980px){
+  .bs2-focus{grid-template-columns:1fr;}
+  .bs2-g4{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .bs2-g3{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .bs2-footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  :root{--bs2-sticky:96px;}
+  .bs2-nav{display:none;order:5;flex-basis:100%;}
+  .bs2-nav.is-open{display:flex;flex-direction:column;background:var(--bs2-panel);border-radius:12px;padding:8px;margin-top:6px;}
+  .bs2-burger{display:inline-block;margin-left:auto;}
+  .bs2-search{order:4;flex-basis:100%;}
+  .bs2-search-field{flex:1 1 auto;}
+  .bs2-search-field input{width:100%;}
+  .bs2-g2,.bs2-g3,.bs2-g4{grid-template-columns:1fr;}
+  .bs2-stats{grid-template-columns:1fr;}
+  .bs2-hero-inner{padding:52px 0 44px;}
+  .bs2-section{padding:46px 0;}
+  .bs2-footer-grid{grid-template-columns:1fr;}
+  .bs2-cta{padding:26px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="bs2-sticky-zone">
+  <div class="bs2-notice">
+    <div class="bs2-wrap bs2-notice-inner">
+      <span class="bs2-notice-tag">官方发布</span>
+      <div class="bs2-notice-track">
+        <span class="bs2-notice-item">《黑兽2樱花动漫全集》第 7 期剧情深度解析专题已上线，含 4 条分镜拆解内容</span>
+        <span class="bs2-notice-item">11 月创作者扶持计划开启报名，上传原创短片可获官方推荐位</span>
+        <span class="bs2-notice-item">新增「暗黑幻想世界观」图文索引 5 篇，支持高清原画下载</span>
+        <span class="bs2-notice-item">社区口碑评分模块上线，本轮共有 9 位用户留下真实评价</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="bs2-header">
+    <div class="bs2-wrap bs2-header-inner">
+      <a class="bs2-logo" href="#bs2-hero" aria-label="黑兽2樱花动漫全集官方网站首页">
+        <svg class="bs2-logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="15" fill="#221d33"/>
+          <path d="M16 48 L32 12 L48 48 L32 39 Z" fill="#e8467c"/>
+          <circle cx="32" cy="31" r="4" fill="#5fe0d0"/>
+        </svg>
+        <span class="bs2-logo-text">黑兽2樱花动漫全集<small>OFFICIAL VIDEO</small></span>
+      </a>
+      <nav class="bs2-nav" id="bs2Nav" aria-label="主导航">
+        <a href="#bs2-hero">首页</a>
+        <a href="#bs2-focus">焦点内容</a>
+        <a href="#bs2-topics">专题企划</a>
+        <a href="#bs2-article">关键词解析</a>
+        <a href="#bs2-authors">创作者</a>
+        <a href="#bs2-reviews">社区口碑</a>
+        <a href="#bs2-faq">常见问题</a>
+      </nav>
+      <div class="bs2-search">
+        <form class="bs2-search-field" id="bs2SearchForm" role="search" onsubmit="return false;">
+          <input id="bs2SearchInput" type="search" placeholder="搜索剧集、专题、创作者" aria-label="站内搜索">
+          <button class="bs2-search-btn" id="bs2SearchBtn" type="button">搜索</button>
+        </form>
+        <div class="bs2-search-hint" id="bs2SearchHint" aria-live="polite"></div>
+      </div>
+      <button class="bs2-burger" id="bs2Burger" aria-expanded="false" aria-controls="bs2Nav">菜单</button>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- S2 品牌首屏 -->
+  <section class="bs2-hero" id="bs2-hero">
+    <div class="bs2-hero-bg">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23120f1c'/%3E%3Cstop offset='.55' stop-color='%232a1c3e'/%3E%3Cstop offset='1' stop-color='%234a1f3e'/%3E%3C/linearGradient%3E%3CradialGradient id='r' cx='.76' cy='.28' r='.5'%3E%3Cstop offset='0' stop-color='%23e8467c' stop-opacity='.62'/%3E%3Cstop offset='1' stop-color='%23e8467c' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23g)'/%3E%3Crect width='1600' height='900' fill='url(%23r)'/%3E%3Cg stroke='%235fe0d0' stroke-opacity='.3' fill='none'%3E%3Ccircle cx='1180' cy='250' r='170'/%3E%3Ccircle cx='1180' cy='250' r='120'/%3E%3Ccircle cx='1180' cy='250' r='72' stroke='%23ff8fb3' stroke-opacity='.55'/%3E%3C/g%3E%3Cg fill='%239b7bff' fill-opacity='.28'%3E%3Cpath d='M0 760 L220 560 L420 720 L620 520 L860 760 L1060 610 L1300 780 L1600 600 L1600 900 L0 900 Z'/%3E%3C/g%3E%3Cg stroke='%23ff8fb3' stroke-opacity='.35'%3E%3Cpath d='M120 150 L300 150 L300 300' fill='none'/%3E%3Cpath d='M1480 700 L1480 560 L1340 560' fill='none'/%3E%3C/g%3E%3Cg fill='%23efeaf7' fill-opacity='.5'%3E%3Ccircle cx='260' cy='620' r='3'/%3E%3Ccircle cx='520' cy='420' r='2.4'/%3E%3Ccircle cx='860' cy='300' r='3.2'/%3E%3Ccircle cx='1400' cy='420' r='2.6'/%3E%3Ccircle cx='980' cy='700' r='2.2'/%3E%3C/g%3E%3C/svg%3E" alt="黑兽2樱花动漫全集官方首屏主视觉：暗紫夜空下霓虹圆环与山脉剪影构成的世界观画面">
+    </div>
+    <div class="bs2-wrap bs2-hero-inner">
+      <span class="bs2-hero-badge">官方 · 正版 · 高清视频门户</span>
+      <h1>黑兽2樱花动漫全集</h1>
+      <p class="bs2-hero-sub">暗黑幻想题材的原创视频品牌，用影像讲述力量与温柔并存的成长故事。</p>
+      <p class="bs2-hero-desc">
+        作为深耕暗黑幻想垂直领域的官方网站，我们围绕《黑兽2樱花动漫全集》持续运营原创内容生态：
+        从剧情解析、分镜拆解到创作者访谈与社区共创，为品牌、企业与观众搭建一个值得信赖的高品质视频社区。
+        平台坚持正版、高清与专业的内容标准，让每一次观看都成为一次真实的陪伴。
+      </p>
+      <div class="bs2-hero-actions">
+        <a class="bs2-btn bs2-btn--primary" href="#bs2-focus">观看焦点内容</a>
+        <a class="bs2-btn bs2-btn--ghost" href="#bs2-topics">进入专题企划</a>
+        <button class="bs2-btn bs2-btn--ghost" id="bs2SubmitOpen" type="button">创作者投稿</button>
+        <button class="bs2-btn bs2-btn--ghost" id="bs2ShareOpen" type="button">分享品牌页</button>
+      </div>
+      <div class="bs2-stats">
+        <div class="bs2-stat"><b data-count="1286">0</b><span>正版高清内容条目</span></div>
+        <div class="bs2-stat"><b data-count="96">0</b><span>签约原创创作者（位）</span></div>
+        <div class="bs2-stat"><b data-count="412">0</b><span>社区口碑好评率（‰）</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容：一幅重点大图 + 文字列表 -->
+  <section class="bs2-section" id="bs2-focus">
+    <div class="bs2-wrap">
+      <span class="bs2-kicker">焦点推荐</span>
+      <h2 class="bs2-h2">本期<em>黑兽2樱花动漫全集</em>重点内容</h2>
+      <p class="bs2-lead">由官方编辑团队与社区创作者共同挑选，聚焦剧情结构、影像语言与人物弧光。封面为重点条目，其余以文字摘要呈现，方便快速浏览。</p>
+
+      <div class="bs2-focus" style="margin-top:26px;">
+        <article>
+          <div class="bs2-focus-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231a1327'/%3E%3Cstop offset='1' stop-color='%233d1f3a'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8fb3' stop-opacity='.85'/%3E%3Cstop offset='1' stop-color='%239b7bff' stop-opacity='.15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='540' fill='url(%23a)'/%3E%3Cg stroke='%235fe0d0' stroke-opacity='.45' fill='none'%3E%3Cpath d='M80 420 L280 200 L470 400 L640 170 L880 420'/%3E%3Cpath d='M80 460 L280 240 L470 440 L640 210 L880 460' stroke-opacity='.18'/%3E%3C/g%3E%3Cpath d='M330 540 L480 130 L630 540 Z' fill='url(%23b)'/%3E%3Cg fill='%23efeaf7'%3E%3Ccircle cx='480' cy='126' r='9'/%3E%3C/g%3E%3Cg fill='%23ff8fb3' fill-opacity='.7'%3E%3Crect x='120' y='90' width='46' height='4' rx='2'/%3E%3Crect x='120' y='104' width='78' height='4' rx='2'/%3E%3C/g%3E%3Cg fill='%235fe0d0' fill-opacity='.55'%3E%3Ccircle cx='810' cy='120' r='3'/%3E%3Ccircle cx='760' cy='86' r='2'/%3E%3Ccircle cx='862' cy='158' r='2.4'/%3E%3C/g%3E%3C/svg%3E" alt="黑兽2樱花动漫全集剧情结构解析专题封面：山脊线与粉紫光束构成的对峙构图">
+            <span class="bs2-play">▶ 正片 · 24:16</span>
+          </div>
+          <div style="padding-top:16px;">
+            <span class="bs2-tag bs2-tag--pink">深度解析</span>
+            <span class="bs2-tag">剧情结构</span>
+            <h3 style="font-size:20px;margin:8px 0 8px;">《黑兽2樱花动漫全集》主线三幕结构拆解：从裂隙到重组</h3>
+            <p style="font-size:14px;color:var(--bs2-muted);">
+              本期正片以三幕结构为线索，逐段标注关键转折。我们记录了 12 处镜头调度与 5 段配乐进入点，
+              并结合创作者访谈说明为什么「沉默的三秒」成为整部作品的情绪支点。
+              内容适合第一次接触黑兽2樱花动漫全集的观众，也适合反复回看的老观众。
+            </p>
+            <div class="bs2-focus-meta">
+              <span>作者：雾港分镜室</span><span>播放 42.8 万</span><span>点赞 1.9 万</span><span>收藏 8632</span>
+            </div>
+            <div class="bs2-vid-actions">
+              <button class="bs2-act" data-like type="button" data-base="19420">♡ 点赞 <span>19420</span></button>
+              <button class="bs2-act" data-fav type="button">☆ 收藏</button>
+              <button class="bs2-act" data-comment-open type="button">💬 评论</button>
+              <button class="bs2-act" data-copy type="button">🔗 复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <div>
+          <div class="bs2-card" style="padding:8px 22px;">
+            <div class="bs2-list-item">
+              <span class="bs2-list-index">01</span>
+              <div>
+                <h3>樱花线为何反复出现：色彩叙事的四次递进</h3>
+                <p>从冷灰到暖粉，逐帧对照 4 个关键场景的色彩脚本，讲清视觉语言如何服务情绪。</p>
+                <div class="bs2-list-meta"><span>作者：色彩档案局</span><span>播放 21.6 万</span></div>
+              </div>
+            </div>
+            <div class="bs2-list-item">
+              <span class="bs2-list-index">02</span>
+              <div>
+                <h3>配乐进入点实测：第 3 集 18 分 40 秒为什么突然安静</h3>
+                <p>用时间轴标注的方式复盘音效层次，给剪辑爱好者一份可直接套用的结构表。</p>
+                <div class="bs2-list-meta"><span>作者：低频观察</span><span>播放 15.3 万</span></div>
+              </div>
+            </div>
+            <div class="bs2-list-item">
+              <span class="bs2-list-index">03</span>
+              <div>
+                <h3>角色弧光对照：三位主角的选择与代价</h3>
+                <p>以人物动机为轴，梳理三条成长线索，回答观众留言中出现频率最高的七个疑问。</p>
+                <div class="bs2-list-meta"><span>作者：叙事研究所</span><span>播放 33.1 万</span></div>
+              </div>
+            </div>
+            <div class="bs2-list-item">
+              <span class="bs2-list-index">04</span>
+              <div>
+                <h3>幕后访谈：美术组谈暗色系场景的可读性难题</h3>
+                <p>访谈摘录 6 段，含场景草图 3 幅的使用说明，呈现专业团队的取舍过程。</p>
+                <div class="bs2-list-meta"><span>作者：品牌编辑部</span><span>播放 9.7 万</span></div>
+              </div>
+            </div>
+            <div class="bs2-list-item">
+              <span class="bs2-list-index">05</span>
+              <div>
+                <h3>新人入门攻略：从第一集到专题索引的观看路径</h3>
+                <p>为刚接触黑兽2樱花动漫全集的观众准备，给出 5 条不剧透的观看建议。</p>
+                <div class="bs2-list-meta"><span>作者：入口向导组</span><span>播放 12.4 万</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 延伸：热门视频流（三列卡片） -->
+  <section class="bs2-section bs2-section--tight" aria-labelledby="bs2-hot-title">
+    <div class="bs2-wrap">
+      <span class="bs2-kicker">社区热门</span>
+      <h2 class="bs2-h2" id="bs2-hot-title">持续更新的<em>黑兽2樱花动漫全集</em>视频流</h2>
+      <p class="bs2-lead">由创作者社区共同产出的原创内容，全部经过官方编辑校对。以下条目按近期热度排序，支持点赞、收藏与评论互动。</p>
+
+      <div class="bs2-grid bs2-g3" style="margin-top:26px;">
+        <article class="bs2-card">
+          <div class="bs2-vid-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='c1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23211a33'/%3E%3Cstop offset='1' stop-color='%23502a4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23c1)'/%3E%3Cg fill='none' stroke='%23ff8fb3' stroke-opacity='.6'%3E%3Cpath d='M60 300 Q160 120 260 250 T460 180 T600 260'/%3E%3Cpath d='M60 330 Q160 170 260 290 T460 220 T600 300' stroke-opacity='.25'/%3E%3C/g%3E%3Cg fill='%235fe0d0'%3E%3Ccircle cx='260' cy='250' r='5'/%3E%3Ccircle cx='460' cy='180' r='4'/%3E%3C/g%3E%3Cg fill='%23e8467c' fill-opacity='.75'%3E%3Crect x='60' y='60' width='120' height='8' rx='4'/%3E%3Crect x='60' y='82' width='72' height='8' rx='4' fill-opacity='.4'/%3E%3C/g%3E%3C/svg%3E" alt="黑兽2樱花动漫全集色彩叙事专题缩略图：粉线波形与深紫背景">
+          </div>
+          <span class="bs2-tag">影像美学</span><span class="bs2-tag bs2-tag--pink">原创</span>
+          <h3 style="font-size:16.5px;margin:8px 0 6px;">色彩档案：黑兽2樱花动漫全集的四段色调迁移</h3>
+          <p style="font-size:13.5px;color:var(--bs2-muted);">逐帧对照四个关键场景的色卡，把视觉情绪变化拆成可学习的方法。</p>
+          <div class="bs2-list-meta" style="font-size:12px;color:#817799;display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;">
+            <span>色彩档案局</span><span>播放 18.2 万</span><span>点赞 7410</span>
+          </div>
+          <div class="bs2-vid-actions">
+            <button class="bs2-act" data-like type="button" data-base="7410">♡ 点赞 <span>7410</span></button>
+            <button class="bs2-act" data-fav type="button">☆ 收藏</button>
+            <button class="bs2-act" data-copy type="button">🔗 复制</button>
+          </div>
+        </article>
+
+        <article class="bs2-card">
+          <div class="bs2-vid-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23171222'/%3E%3Cg stroke='%239b7bff' fill='none' stroke-opacity='.75'%3E%3Crect x='90' y='90' width='150' height='180' rx='8'/%3E%3Crect x='270' y='130' width='150' height='140' rx='8' stroke='%235fe0d0'/%3E%3Crect x='450' y='70' width='110' height='200' rx='8' stroke='%23e8467c'/%3E%3C/g%3E%3Cg fill='%23efeaf7' fill-opacity='.85'%3E%3Ccircle cx='165' cy='180' r='16'/%3E%3C/g%3E%3Cpath d='M350 200 L330 250 L370 250 Z' fill='%235fe0d0' fill-opacity='.8'/%3E%3Cg fill='%23ff8fb3' fill-opacity='.5'%3E%3Crect x='90' y='300' width='200' height='6' rx='3'/%3E%3Crect x='310' y='300' width='130' height='6' rx='3'/%3E%3C/g%3E%3C/svg%3E" alt="黑兽2樱花动漫全集幕后访谈缩略图：三块分镜画框与播放标识">
+          </div>
+          <span class="bs2-tag">人物访谈</span><span class="bs2-tag">创作幕后</span>
+          <h3 style="font-size:16.5px;margin:8px 0 6px;">美术组访谈：暗色场景如何保持信息可读</h3>
+          <p style="font-size:13.5px;color:var(--bs2-muted);">6 段访谈摘录，聊清分层打光与轮廓分离的具体做法。</p>
+          <div class="bs2-list-meta" style="font-size:12px;color:#817799;display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;">
+            <span>品牌编辑部</span><span>播放 9.4 万</span><span>点赞 5120</span>
+          </div>
+          <div class="bs2-vid-actions">
+            <button class="bs2-act" data-like type="button" data-base="5120">♡ 点赞 <span>5120</span></button>
+            <button class="bs2-act" data-fav type="button">☆ 收藏</button>
+            <button class="bs2-act" data-copy type="button">🔗 复制</button>
+          </div>
+        </article>
+
+        <article class="bs2-card">
+          <div class="bs2-vid-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3CradialGradient id='c3' cx='.5' cy='.4' r='.65'%3E%3Cstop offset='0' stop-color='%23e8467c' stop-opacity='.55'/%3E%3Cstop offset='1' stop-color='%231b1528' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='%231b1528'/%3E%3Crect width='640' height='360' fill='url(%23c3)'/%3E%3Cg stroke='%23ffd9e6' stroke-opacity='.7' fill='none' stroke-width='1.5'%3E%3Cpath d='M320 60 L370 180 L320 300 L270 180 Z'/%3E%3Cpath d='M320 110 L348 180 L320 250 L292 180 Z' stroke='%235fe0d0'/%3E%3C/g%3E%3Cg fill='%23efeaf7'%3E%3Ccircle cx='320' cy='180' r='6'/%3E%3C/g%3E%3Cg fill='%23ffd9e6' fill-opacity='.45'%3E%3Crect x='60' y='310' width='120' height='5' rx='2.5'/%3E%3Crect x='460' y='310' width='120' height='5' rx='2.5'/%3E%3C/g%3E%3C/svg%3E" alt="黑兽2樱花动漫全集角色弧光分析缩略图：中心菱形符号与粉色光晕">
+          </div>
+          <span class="bs2-tag">深度解析</span><span class="bs2-tag bs2-tag--pink">精品内容</span>
+          <h3 style="font-size:16.5px;margin:8px 0 6px;">角色弧光对照：三条成长线如何交汇</h3>
+          <p style="font-size:13.5px;color:var(--bs2-muted);">从动机到代价，用对照表呈现三位主角在关键时刻的选择差异。</p>
+          <div class="bs2-list-meta" style="font-size:12px;color:#817799;display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;">
+            <span>叙事研究所</span><span>播放 27.5 万</span><span>点赞 11260</span>
+          </div>
+          <div class="bs2-vid-actions">
+            <button class="bs2-act" data-like type="button" data-base="11260">♡ 点赞 <span>11260</span></button>
+            <button class="bs2-act" data-fav type="button">☆ 收藏</button>
+            <button class="bs2-act" data-copy type="button">🔗 复制</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="bs2-card" style="margin-top:22px;padding:6px 24px;">
+        <div class="bs2-list-item">
+          <span class="bs2-list-index">06</span>
+          <div>
+            <h3>黑兽2樱花动漫全集 · 新观众观看路径指引</h3>
+            <p>不剧透的入门顺序建议，附带三条常见误区提示。作者：入口向导组 · 播放 12.4 万 · 点赞 4830。</p>
+            <div class="bs2-vid-actions">
+              <button class="bs2-act" data-like type="button" data-base="4830">♡ 点赞 <span>4830</span></button>
+              <button class="bs2-act" data-fav type="button">☆ 收藏</button>
+            </div>
+          </div>
+        </div>
+        <div class="bs2-list-item">
+          <span class="bs2-list-index">07</span>
+          <div>
+            <h3>声音设计复盘：低频如何在暗场中建立压迫感</h3>
+            <p>附 4 段可对照的音频层次示意，适合剪辑与音效爱好者。作者：低频观察 · 播放 8.1 万 · 点赞 3910。</p>
+            <div class="bs2-vid-actions">
+              <button class="bs2-act" data-like type="button" data-base="3910">♡ 点赞 <span>3910</span></button>
+              <button class="bs2-act" data-fav type="button">☆ 收藏</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="bs2-section" id="bs2-topics">
+    <div class="bs2-wrap">
+      <span class="bs2-kicker">专题企划</span>
+      <h2 class="bs2-h2">围绕<em>黑兽2樱花动漫全集</em>的品牌专题</h2>
+      <p class="bs2-lead">官方发布的长期企划，每个专题持续更新，并同步收录社区创作者的优质投稿。专题内条目均可单独评论与收藏。</p>
+
+      <div class="bs2-grid bs2-g3" style="margin-top:26px;">
+        <article class="bs2-topic">
+          <span class="bs2-topic-status">更新中 · 已更 7 期</span>
+          <h3>分镜拆解计划</h3>
+          <p>以每期三幕的结构为骨架，标注关键镜头的机位、时长与信息密度，形成可查询的分镜档案。</p>
+          <ul>
+            <li>第 7 期：对峙场景的视线引导与留白处理</li>
+            <li>第 6 期：垂直构图在窄画幅中的稳定作用</li>
+            <li>第 5 期：光斑作为情绪标点的十二次出现</li>
+          </ul>
+        </article>
+
+        <article class="bs2-topic">
+          <span class="bs2-topic-status">更新中 · 已更 5 期</span>
+          <h3>角色档案补完</h3>
+          <p>从台词、动作与关系网三个维度补完角色设定，为长篇叙事提供可追溯的参照资料。</p>
+          <ul>
+            <li>关系网图谱：三角结构的四次调整</li>
+            <li>台词密度统计：沉默之外的信息传递</li>
+            <li>动作设计来源：从舞台剧到动画的转译</li>
+          </ul>
+        </article>
+
+        <article class="bs2-topic">
+          <span class="bs2-topic-status">已完结 · 共 4 期</span>
+          <h3>社区共创影像季</h3>
+          <p>面向社区征集的短片季，收录 4 部由创作者自发完成的衍生短片，呈现多元视角与创新表达。</p>
+          <ul>
+            <li>《回声》：以环境声重述同一段对峙</li>
+            <li>《三步》：用定格动画改编关键选择</li>
+            <li>《樱花之后》：平行时空的一次温柔假设</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6/关键词解析（含品牌故事与深度解析） -->
+  <section class="bs2-section" id="bs2-article">
+    <div class="bs2-wrap">
+      <span class="bs2-kicker">关键词深度解析</span>
+      <h2 class="bs2-h2">理解<em>黑兽2樱花动漫全集</em>：一个视频品牌的叙事方法</h2>
+      <p class="bs2-lead">这一段是官方网站的内容解读，面向希望系统了解我们品牌与内容生态的读者。全文约 1000 字，分四个层面展开。</p>
+
+      <div class="bs2-article" style="margin-top:26px;">
+        <h3>一、品牌定位：为什么是暗黑幻想，为什么是影像</h3>
+        <p>
+          黑兽2樱花动漫全集并不是一个孤立的作品名，它背后是一套持续运营的影像内容体系。我们把品牌定位在一个相对垂直的领域：暗黑幻想。
+          这个类型天然带有张力和门槛——世界观需要自洽，角色动机需要可推演，视觉语言必须在低照度环境里仍然保持信息可读。
+          正因为门槛高，它才值得深耕。作为官方网站，我们的职责不是复述剧情，而是把创作方法、审美判断和社区讨论沉淀为可检索的内容资产，
+          让观众在观看之外获得理解，让创作者在模仿之外获得方法。这也是我们坚持以正版、高清、专业标准运营内容生态的底层原因。
+        </p>
+        <p>
+          在具体做法上，我们把内容拆成三层：第一层是官方发布的解读与专题，负责建立标准；第二层是签约创作者产出的原创视频，
+          负责提供多元视角；第三层是社区成员的短评、攻略与投稿，负责让内容保持活力。三层之间通过标签、索引与专题互链，
+          形成一个能自我更新的结构。我们不追求短期的爆款堆叠，而是追求长期可回看的内容品质与口碑积累。
+        </p>
+
+        <h3>二、内容生态：从一集正片到一张可检索的知识网络</h3>
+        <p>
+          很多观众第一次接触黑兽2樱花动漫全集时，会先被画面的压迫感吸引，随后产生大量疑问：为什么这里要静音三秒？
+          为什么樱花的颜色从灰调变成暖粉？为什么主角在关键时刻反而不说话？这些问题正是内容生态的起点。
+          我们把每一个高频疑问做成独立单元：一个视频条目、一段文字摘要、一组标签、一条可引用的结论。
+          例如「静音三秒」这一单元，就同时关联了配乐进入点分析、分镜时长统计和美术组的访谈摘录，观众可以从任一端进入，再顺着链接走向其他相关单元。
+        </p>
+        <p>
+          为了让这张网络稳定运转，我们设定了三条内容原则。第一是可核验：所有数据标注来源与统计口径，避免模糊表达。
+          第二是可复用：每个单元的结论都尽量写成可直接引用的短句，方便创作者在二创时使用。第三是可讨论：每条内容都开放评论，
+          并保留不同意见，不把解读垄断为唯一答案。我们相信，一个值得信赖的社区，恰恰来自它容得下分歧。
+        </p>
+        <div class="bs2-quote">
+          我们更愿意把官方网站理解为一座长期开放的档案馆：作品是入口，方法才是留存的理由。
+          每一次关于黑兽2樱花动漫全集的讨论，都会成为下一次创作的素材。
+        </div>
+
+        <h3>三、创作者与社区：让专业与热情同处一个空间</h3>
+        <p>
+          品牌的生命力来自创作者。我们的签约创作者背景各异：有剪辑师、有美术从业者、有长期做剧情分析的内容研究者，
+          也有纯粹出于热爱开始做视频的普通观众。为了避免内容同质化，我们按擅长领域划分创作者矩阵，
+          并在专题内明确标注来源，让专业内容与个人表达各有位置。平台的角色是提供工具与规则：
+          统一的高清上传规范、清晰的署名与转载政策、可追踪的更新日志，以及面向新人的投稿引导。
+        </p>
+        <p>
+          社区方面，我们更看重「真实的互动」而非数字增长。评论区长评与短评并存，允许观点碰撞，也鼓励补充细节。
+          我们在每季度做一次社区口碑回顾，公开好评与批评的比例，并把高频建议纳入产品迭代。
+          这套机制让我们在持续运营中保持清醒：用户至上不是口号，而是把每一条反馈都当作内容生态的一部分。
+        </p>
+
+        <h3>四、品质与责任：一个视频品牌应当坚持什么</h3>
+        <p>
+          作为行业内的垂直内容平台，我们对品质的理解包含三层含义。其一是技术品质：画质、音轨、字幕与加载体验都要经得起反复观看。
+          其二是叙事品质：拒绝用夸张标题换取点击，解读要有依据，结论要留有余地。其三是社区品质：对抄袭、搬运与恶意引战保持明确的处理规则，
+          让原创者获得应有的尊重。我们相信，只有把这三层都做好，黑兽2樱花动漫全集这个关键词才配得上「用户首选」与「值得信赖」的评价。
+        </p>
+        <p>
+          与此同时，我们也承担着相应的社会责任：为青少年观众提供内容分级提示，为创作者提供版权说明模板，
+          为初次接触暗黑幻想类型的观众提供温和的入门路径。我们不认为这些工作会削弱作品的锋利感，
+          恰恰相反，清晰的边界让创作更自由，也让社区更有力量。未来，我们会继续以匠心打磨每一个条目，
+          以创新探索新的影像表达，以包容的姿态欢迎多元声音，让品牌在成长中始终保持温度。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵（双列简介） -->
+  <section class="bs2-section bs2-section--tight" id="bs2-authors">
+    <div class="bs2-wrap">
+      <span class="bs2-kicker">创作者矩阵</span>
+      <h2 class="bs2-h2">为<em>黑兽2樱花动漫全集</em>持续创作的作者</h2>
+      <p class="bs2-lead">以下是本季度活跃的六位创作者，覆盖分镜、色彩、声音、叙事与社区运营等方向。点击可查看作者档案摘要。</p>
+
+      <div class="bs2-grid bs2-g2" style="margin-top:26px;">
+        <article class="bs2-card">
+          <div class="bs2-author">
+            <div class="bs2-avatar" style="background:linear-gradient(135deg,#ff8fb3,#e8467c);">雾</div>
+            <div>
+              <h3>雾港分镜室</h3>
+              <div class="bs2-role">擅长领域：分镜拆解 · 结构分析</div>
+              <p>长期做动画分镜研究，习惯用时间轴与机位图表说话。为黑兽2樱花动漫全集制作了 26 期拆解内容，强调「先看结构再看情绪」的分析顺序，希望观众看完能自己画出一张镜头草图。</p>
+              <div class="bs2-author-data"><span>作品 128</span><span>粉丝 24.6 万</span></div>
+              <button class="bs2-author-more" data-author="雾港分镜室|累计创作 128 条原创视频，其中分镜拆解系列 26 期，平均单期时长 18 分钟。主张用可复现的方法替代主观感受，是社区内被引用最多的作者之一。" type="button">作者简介</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bs2-card">
+          <div class="bs2-author">
+            <div class="bs2-avatar" style="background:linear-gradient(135deg,#5fe0d0,#3aa89b);">色</div>
+            <div>
+              <h3>色彩档案局</h3>
+              <div class="bs2-role">擅长领域：影像美学 · 色彩叙事</div>
+              <p>以色彩脚本为切口做解读，收集了黑兽2樱花动漫全集中 4 个阶段的完整色卡。她的视频节奏克制，喜欢把对比放在同一帧里，让观众自己看见变化，而不是听结论。</p>
+              <div class="bs2-author-data"><span>作品 87</span><span>粉丝 18.3 万</span></div>
+              <button class="bs2-author-more" data-author="色彩档案局|主攻影像美学方向，累计 87 条作品，色彩叙事系列被多个内容团队作为教学参考。坚持所有色值公开可查，接受社区复核。" type="button">作者简介</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bs2-card">
+          <div class="bs2-author">
+            <div class="bs2-avatar" style="background:linear-gradient(135deg,#9b7bff,#5d43c9);">低</div>
+            <div>
+              <h3>低频观察</h3>
+              <div class="bs2-role">擅长领域：声音设计 · 音频复盘</div>
+              <p>声音设计师出身，专注低频与留白的关系。为黑兽2樱花动漫全集做过多期音效层次复盘，习惯附上可直接对照的音频结构表，被不少剪辑新人当作入门材料。</p>
+              <div class="bs2-author-data"><span>作品 64</span><span>粉丝 11.9 万</span></div>
+              <button class="bs2-author-more" data-author="低频观察|声音设计从业者，64 条作品中超过一半为音频复盘，强调「听见结构」。所有结构表公开下载，允许在署名前提下二次使用。" type="button">作者简介</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bs2-card">
+          <div class="bs2-author">
+            <div class="bs2-avatar" style="background:linear-gradient(135deg,#ffd9e6,#e8467c);">叙</div>
+            <div>
+              <h3>叙事研究所</h3>
+              <div class="bs2-role">擅长领域：剧情解析 · 人物弧光</div>
+              <p>由三位内容研究者组成的团队，擅长把长篇叙事的角色动机画成对照表。他们为黑兽2樱花动漫全集建立的成长线索引，是社区讨论时最常被引用的参考资料。</p>
+              <div class="bs2-author-data"><span>作品 152</span><span>粉丝 31.2 万</span></div>
+              <button class="bs2-author-more" data-author="叙事研究所|三人团队协作产出，152 条作品以剧情与人物分析为主。工作流程强调交叉复核，每条结论至少两人确认后才发布。" type="button">作者简介</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bs2-card">
+          <div class="bs2-author">
+            <div class="bs2-avatar" style="background:linear-gradient(135deg,#7fd0ff,#3d7fb8);">编</div>
+            <div>
+              <h3>品牌编辑部</h3>
+              <div class="bs2-role">擅长领域：官方发布 · 访谈企划</div>
+              <p>官方网站的编辑团队，负责黑兽2樱花动漫全集的官方发布、访谈企划与企业动态。坚持每一条内容都标注来源与更新日期，是社区信任度的主要来源之一。</p>
+              <div class="bs2-author-data"><span>作品 203</span><span>粉丝 42.8 万</span></div>
+              <button class="bs2-author-more" data-author="品牌编辑部|官方账号，203 条内容覆盖发布、访谈与专题企划。所有稿件经双人校订，更新日志公开可查，接受社区监督与纠错。" type="button">作者简介</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bs2-card">
+          <div class="bs2-author">
+            <div class="bs2-avatar" style="background:linear-gradient(135deg,#ffc48f,#d97f36);">向</div>
+            <div>
+              <h3>入口向导组</h3>
+              <div class="bs2-role">擅长领域：入门攻略 · 社区运营</div>
+              <p>面向新观众的内容小组，为黑兽2樱花动漫全集设计不剧透的观看路径与常见疑问清单。他们的内容语气轻松，但在事实核查上相当严格，每条建议都经过实际回看验证。</p>
+              <div class="bs2-author-data"><span>作品 58</span><span>粉丝 9.6 万</span></div>
+              <button class="bs2-author-more" data-author="入口向导组|专注新人引导与社区运营，58 条作品以攻略和问答为主。所有观看建议均经过两位成员独立回看确认，避免剧透与误导。" type="button">作者简介</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 社区口碑 & 排行（双列短评 + 评分摘要） -->
+  <section class="bs2-section" id="bs2-reviews">
+    <div class="bs2-wrap">
+      <span class="bs2-kicker">社区口碑</span>
+      <h2 class="bs2-h2"><em>黑兽2樱花动漫全集</em>的真实用户评价</h2>
+      <p class="bs2-lead">以下评价来自社区成员与投稿观众，长短不一、角度各异。我们保留批评意见，也欢迎补充细节。</p>
+
+      <div class="bs2-grid bs2-g2" style="margin-top:26px;align-items:start;">
+        <div class="bs2-card" style="padding:8px 24px;">
+          <div class="bs2-cmt">
+            <div class="bs2-cmt-head"><b>夜航的灯</b><span>2 天前</span></div>
+            <p>第一次按专题索引的顺序看完全部解析，最直接的感受是「有据可依」。以前只是觉得画面冷，现在能说出冷在哪里、为什么冷，这种变化很踏实。</p>
+          </div>
+          <div class="bs2-cmt">
+            <div class="bs2-cmt-head"><b>南岸画手</b><span>3 天前</span></div>
+            <p>色彩档案局那条视频我反复看了三遍，色卡直接截图做了自己的参考。希望以后能出可下载的调色说明，做作业的时候真的用得上。</p>
+          </div>
+          <div class="bs2-cmt">
+            <div class="bs2-cmt-head"><b>一枚剪辑新手</b><span>5 天前</span></div>
+            <p>音频结构表对新人太友好了，照着标注去听，确实能听出层次。唯一的小意见是有些术语没有解释，需要自己查，稍微有点门槛。</p>
+          </div>
+          <div class="bs2-cmt">
+            <div class="bs2-cmt-head"><b>老观众阿衡</b><span>6 天前</span></div>
+            <p>看了十年动画，很少见到官网把「不同意见」也放出来的。角色解读那期评论区争得很热，但没人吵架，都在补细节，这个氛围挺难得。</p>
+          </div>
+        </div>
+
+        <div class="bs2-card" style="padding:8px 24px;">
+          <div class="bs2-cmt">
+            <div class="bs2-cmt-head"><b>雾里看片</b><span>1 周前</span></div>
+            <p>更新节奏稳定，这点必须夸。专题说更 7 期就真的更到第 7 期，没有烂尾，持续运营不是说说而已。</p>
+            <div class="bs2-cmt-score">★★★★★ 5.0</div>
+          </div>
+          <div class="bs2-cmt">
+            <div class="bs2-cmt-head"><b>拾光者</b><span>1 周前</span></div>
+            <p>移动端体验不错，通勤路上能顺畅刷完一条长解析。如果收藏夹能分组就更好了，现在攒的内容有点多，找起来费劲。</p>
+            <div class="bs2-cmt-score">★★★★☆ 4.0</div>
+          </div>
+          <div class="bs2-cmt">
+            <div class="bs2-cmt-head"><b>纸飞机计划</b><span>1 周前</span></div>
+            <p>投稿流程比想象中简单，上传规范写得很细，避免了很多来回沟通。我的短片一周内就进了专题，还给配了推荐位，挺惊喜。</p>
+            <div class="bs2-cmt-score">★★★★★ 5.0</div>
+          </div>
+          <div class="bs2-cmt">
+            <div class="bs2-cmt-head"><b>山顶的风</b><span>2 周前</span></div>
+            <p>整体很专业，但希望新人引导能再温和一点。第一次点进分镜解析的时候信息量确实有点大，差点劝退。后来从入门攻略看起才顺。</p>
+            <div class="bs2-cmt-score">★★★☆☆ 3.5</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bs2-grid bs2-g2" style="margin-top:22px;">
+        <div class="bs2-card">
+          <h3 style="font-size:16.5px;margin-bottom:12px;">本期热度榜</h3>
+          <ul class="bs2-rank">
+            <li><span class="bs2-rank-no">1</span><span class="bs2-rank-name">主线三幕结构拆解：从裂隙到重组</span><span class="bs2-rank-val">42.8 万</span></li>
+            <li><span class="bs2-rank-no">2</span><span class="bs2-rank-name">角色弧光对照：三条成长线</span><span class="bs2-rank-val">27.5 万</span></li>
+            <li><span class="bs2-rank-no">3</span><span class="bs2-rank-name">色彩档案：四段色调迁移</span><span class="bs2-rank-val">18.2 万</span></li>
+            <li><span class="bs2-rank-no">4</span><span class="bs2-rank-name">配乐进入点实测与时间轴标注</span><span class="bs2-rank-val">15.3 万</span></li>
+            <li><span class="bs2-rank-no">5</span><span class="bs2-rank-name">新人观看路径指引（不剧透版）</span><span class="bs2-rank-val">12.4 万</span></li>
+          </ul>
+        </div>
+        <div class="bs2-card">
+          <h3 style="font-size:16.5px;margin-bottom:12px;">口碑摘要</h3>
+          <p style="font-size:14px;color:var(--bs2-muted);">本轮共收集 412 条有效评价，综合好评率 92.4%。高频关键词集中在「有据可依」「更新稳定」「投稿友好」，主要建议集中在「收藏分组」与「术语解释」。</p>
+          <div class="bs2-cmt-score" style="font-size:15px;margin-top:6px;">综合评分 4.7 / 5.0</div>
+          <p style="font-size:13px;color:#8b80a8;margin-top:10px;">统计口径：近 30 天内提交且通过内容审核的公开评价，剔除重复提交与明显异常样本。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + FAQ + 合作墙 -->
+  <section class="bs2-section bs2-section--tight" id="bs2-faq">
+    <div class="bs2-wrap">
+      <span class="bs2-kicker">企业动态与帮助</span>
+      <h2 class="bs2-h2"><em>黑兽2樱花动漫全集</em>官方动态与常见问题</h2>
+      <p class="bs2-lead">了解品牌近期发布、更新日志与常见疑问。所有条目均标注时间，便于核对。</p>
+
+      <div class="bs2-grid bs2-g2" style="margin-top:26px;align-items:start;">
+        <div class="bs2-card">
+          <h3 style="font-size:16.5px;margin-bottom:14px;">企业动态</h3>
+          <ul class="bs2-timeline">
+            <li>
+              <time>2026 年 11 月 20 日</time>
+              <p>黑兽2樱花动漫全集第 7 期分镜拆解专题上线，同步开放社区评论与引用授权申请。</p>
+            </li>
+            <li>
+              <time>2026 年 11 月 14 日</time>
+              <p>创作者扶持计划第三季开启报名，面向分镜、色彩与声音三个方向征集原创内容。</p>
+            </li>
+            <li>
+              <time>2026 年 11 月 6 日</time>
+              <p>官方发布内容规范 2.0 版，新增高清上传标准与转载署名细则，更新日志已公开。</p>
+            </li>
+            <li>
+              <time>2026 年 10 月 28 日</time>
+              <p>社区口碑模块完成改版，支持按维度筛选评价，并公开统计口径与样本说明。</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bs2-faq">
+          <h3 style="font-size:16.5px;margin-bottom:14px;">常见问题</h3>
+          <details>
+            <summary>黑兽2樱花动漫全集的官方内容包含哪些部分？</summary>
+            <p>包含官方发布的剧情解析、专题企划、创作者访谈、企业动态与更新日志，以及经审核的社区原创视频。所有内容均标注来源与更新日期。</p>
+          </details>
+          <details>
+            <summary>如何投稿？对设备有要求吗？</summary>
+            <p>通过页面中的投稿入口提交作品信息即可。设备不限，但要求画质不低于 1080p、音频无爆音，并注明素材来源。审核周期通常为 5 至 7 个工作日。</p>
+          </details>
+          <details>
+            <summary>专题内容会长期保留吗？</summary>
+            <p>会。已发布的专题与解析条目默认长期保留，仅在发现事实错误时更新修订说明，不删除历史版本，方便观众核对。</p>
+          </details>
+          <details>
+            <summary>为什么有些评价是批评意见？</summary>
+            <p>我们保留不同意见，只要符合社区规范。真实的批评有助于内容迭代，这也是持续运营中保持口碑可信度的方式。</p>
+          </details>
+          <details>
+            <summary>可以使用你们的内容做二次创作吗？</summary>
+            <p>可以，需在署名并注明来源的前提下使用，不得用于商业售卖。具体范围见官方发布内容规范 2.0 版中的转载与引用条款。</p>
+          </details>
+          <details>
+            <summary>观看是否需要注册？</summary>
+            <p>浏览内容无需注册。点赞、收藏、评论与投稿需要登录账号，以便记录互动数据与处理版权归属。</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="bs2-grid bs2-g4" style="margin-top:22px;">
+        <div class="bs2-partner">分镜合作社</div>
+        <div class="bs2-partner">低频声音工作室</div>
+        <div class="bs2-partner">色彩档案实验室</div>
+        <div class="bs2-partner">叙事研究联盟</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 投稿 / 联系 CTA -->
+  <section class="bs2-section bs2-section--tight">
+    <div class="bs2-wrap">
+      <div class="bs2-cta">
+        <div>
+          <h2>把你的<em style="font-style:normal;color:var(--bs2-neon-soft);">黑兽2樱花动漫全集</em>创作带进社区</h2>
+          <p>官方网站长期开放投稿通道，欢迎原创解析、幕后记录与影像实验。我们提供高清上传规范、署名政策与专题推荐位，让好内容被更多人看见。</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button class="bs2-btn bs2-btn--primary" id="bs2SubmitOpen2" type="button">立即投稿</button>
+          <button class="bs2-btn bs2-btn--ghost" id="bs2ShareOpen2" type="button">分享给同好</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bs2-footer">
+  <div class="bs2-wrap">
+    <div class="bs2-footer-grid">
+      <div>
+        <h4>黑兽2樱花动漫全集 · 官方网站</h4>
+        <p style="margin:0 0 10px;">深耕暗黑幻想垂直领域的原创视频品牌，以正版、高清、专业的内容标准持续运营，为创作者与企业搭建值得信赖的内容生态。</p>
+        <p style="margin:0;">官方发布 · 精品内容 · 社区共创</p>
+      </div>
+      <div>
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="#bs2-focus">焦点内容</a></li>
+          <li><a href="#bs2-topics">专题企划</a></li>
+          <li><a href="#bs2-authors">创作者矩阵</a></li>
+          <li><a href="#bs2-reviews">社区口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌信息</h4>
+        <ul>
+          <li>品牌故事与理念</li>
+          <li>企业动态与更新日志</li>
+          <li>投稿与合作说明</li>
+          <li>内容规范 2.0 版</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bs2-copy">
+      <span>© 2026 黑兽2樱花动漫全集官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容备案号：幻影影像备 2026-0118 号 · 社区内容均标注来源</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bs2-modal" id="bs2Modal" role="dialog" aria-modal="true" aria-labelledby="bs2ModalTitle">
+  <div class="bs2-modal-box">
+    <h3 id="bs2ModalTitle">提示</h3>
+    <p id="bs2ModalBody"></p>
+    <div id="bs2ModalExtra" style="margin-top:14px;font-size:13.5px;color:var(--bs2-cyan);display:none;"></div>
+    <button class="bs2-modal-close" id="bs2ModalClose" type="button">关闭</button>
+  </div>
+</div>
+
+<div class="bs2-toast" id="bs2Toast" role="status" aria-live="polite"></div>
+<button class="bs2-top" id="bs2Top" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  var modal = document.getElementById('bs2Modal');
+  var modalTitle = document.getElementById('bs2ModalTitle');
+  var modalBody = document.getElementById('bs2ModalBody');
+  var modalExtra = document.getElementById('bs2ModalExtra');
+  var toastEl = document.getElementById('bs2Toast');
+  var toastTimer = null;
+
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  function openModal(title, body, extra){
+    modalTitle.textContent = title;
+    modalBody.textContent = body;
+    if(extra){ modalExtra.style.display='block'; modalExtra.textContent = extra; }
+    else { modalExtra.style.display='none'; modalExtra.textContent=''; }
+    modal.classList.add('is-open');
+  }
+  function closeModal(){ modal.classList.remove('is-open'); }
+  document.getElementById('bs2ModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  // 移动端导航
+  var burger = document.getElementById('bs2Burger');
+  var nav = document.getElementById('bs2Nav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '收起' : '菜单';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 760){
+      nav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '菜单';
+    }
+  });
+
+  // 搜索提示反馈
+  var searchInput = document.getElementById('bs2SearchInput');
+  var searchBtn = document.getElementById('bs2SearchBtn');
+  var searchHint = document.getElementById('bs2SearchHint');
+  var searchPool = ['分镜拆解','色彩叙事','角色弧光','声音设计','新人攻略','专题企划','创作者访谈','分镜','樱花线'];
+  function doSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){
+      searchHint.textContent = '试试：分镜拆解 / 色彩叙事 / 角色弧光';
+      return;
+    }
+    var hit = searchPool.filter(function(x){ return x.indexOf(kw) > -1 || kw.indexOf(x) > -1; });
+    if(hit.length){
+      searchHint.textContent = '已匹配 ' + hit.length + ' 个相关标签：' + hit.slice(0,3).join('、');
+    } else {
+      searchHint.textContent = '暂无直接匹配，可浏览「关键词解析」板块';
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  // 点赞 / 收藏
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-like]');
+    if(likeBtn){
+      var span = likeBtn.querySelector('span');
+      var base = parseInt(likeBtn.getAttribute('data-base'), 10) || 0;
+      var liked = likeBtn.classList.toggle('is-liked');
+      var val = liked ? base + 1 : base;
+      if(span) span.textContent = val;
+      likeBtn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+      showToast(liked ? '已点赞，感谢支持原创内容' : '已取消点赞');
+      return;
+    }
+    var favBtn = e.target.closest('[data-fav]');
+    if(favBtn){
+      var faved = favBtn.classList.toggle('is-faved');
+      favBtn.textContent = faved ? '★ 已收藏' : '☆ 收藏';
+      showToast(faved ? '已加入收藏，可在社区收藏夹查看' : '已取消收藏');
+      return;
+    }
+    var copyBtn = e.target.closest('[data-copy]');
+    if(copyBtn){
+      var link = window.location.origin + window.location.pathname + '#bs2-focus';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          showToast('链接已复制，可分享给同好');
+        }).catch(function(){
+          showToast('复制失败，请手动选择页面链接');
+        });
+      } else {
+        showToast('当前环境不支持自动复制');
+      }
+      return;
+    }
+    var cmtBtn = e.target.closest('[data-comment-open]');
+    if(cmtBtn){
+      openModal('评论与讨论', '本条目已开放评论。欢迎补充细节与不同观点，请遵守社区规范：不剧透关键结局、不人身攻击、注明引用来源。', '当前共 386 条评论，其中长评 42 条。');
+      return;
+    }
+    var authorBtn = e.target.closest('[data-author]');
+    if(authorBtn){
+      var raw = authorBtn.getAttribute('data-author') || '';
+      var parts = raw.split('|');
+      openModal(parts[0] || '作者简介', parts[1] || '暂无简介', '作者档案持续更新，作品数据以官方页面为准。');
+      return;
+    }
+  });
+
+  // 投稿 / 分享
+  function bindOpen(id, fn){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('click', fn);
+  }
+  bindOpen('bs2SubmitOpen', function(){
+    openModal('创作者投稿', '投稿请准备：作品标题、3 句内容摘要、素材来源说明、成品文件或预览链接。官方编辑会在 5 至 7 个工作日内回复审核结果。', '提示：画质不低于 1080p，音频无爆音，原创内容优先推荐。');
+  });
+  bindOpen('bs2SubmitOpen2', function(){
+    openModal('创作者投稿', '本季度征集方向：分镜拆解、色彩叙事、声音设计。通过审核的原创作品将进入专题企划，并获得官方推荐位与署名展示。', '报名截止：2026 年 12 月 20 日');
+  });
+  function sharePanel(){
+    openModal('分享品牌页', '你可以把黑兽2樱花动漫全集官方网站分享到微信、微博或 QQ。分享时请保留品牌署名与来源说明，感谢你帮助好内容被更多人看见。', '复制页面链接后粘贴至任意社交平台即可。');
+  }
+  bindOpen('bs2ShareOpen', sharePanel);
+  bindOpen('bs2ShareOpen2', sharePanel);
+
+  // 数字滚动
+  var statEls = document.querySelectorAll('[data-count]');
+  var counterDone = false;
+  function runCounters(){
+    if(counterDone) return;
+    counterDone = true;
+    statEls.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      var start = performance.now();
+      var dur = 1200;
+      function step(now){
+        var p = Math.min((now - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runCounters(); });
+    }, {threshold:0.4});
+    var heroStats = document.querySelector('.bs2-stats');
+    if(heroStats) io.observe(heroStats);
+  } else {
+    runCounters();
+  }
+
+  // 回到顶部
+  var topBtn = document.getElementById('bs2Top');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 620) topBtn.classList.add('is-show');
+    else topBtn.classList.remove('is-show');
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
